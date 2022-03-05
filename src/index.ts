@@ -340,6 +340,23 @@ WA.onInit().then(() => {
     })
     WA.room.onLeaveLayer('zones/formations/6').subscribe(closePopup)
 
+    WA.room.onEnterLayer('zones/formations/playlist').subscribe(() => {
+        const id = "Playlist"
+        const description = WA.state["formations"+id+"Description"] as string;
+        const url = WA.state["formations"+id+"URL"] as string;
+        const embed = WA.state["formations"+id+"Embed"] as boolean;
+
+        let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
+
+        if (url) {
+            cta.push({label: 'Ouvrir', className: 'primary', callback: () => openWebsite(url, embed)})
+        }
+
+        //@ts-ignore
+        currentPopup = WA.ui.openPopup("formations"+id+"Popup", description, cta);
+    })
+    WA.room.onLeaveLayer('zones/formations/playlist').subscribe(closePopup)
+
     // =================== LUXE ===================
 
     WA.room.onEnterLayer('zones/luxe/1').subscribe(() => {
