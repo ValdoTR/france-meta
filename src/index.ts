@@ -391,6 +391,127 @@ WA.onInit().then(() => {
     })
     WA.room.onLeaveLayer('zones/formations/playlist').subscribe(closePopup)
 
+    // =================== VIP ===================
+
+    WA.room.onEnterLayer('zones/vip/1').subscribe(() => {
+        const id = "1"
+        const description = WA.state["vip"+id+"Description"] as string;
+        const url = WA.state["vip"+id+"URL"] as string;
+        const embed = WA.state["vip"+id+"Embed"] as boolean;
+
+        let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
+
+        if (url) {
+            cta.push({label: 'Ouvrir', className: 'primary', callback: () => openWebsite(url, embed)})
+        }
+
+        //@ts-ignore
+        currentPopup = WA.ui.openPopup("vip"+id+"Popup", description, cta);
+    })
+    WA.room.onLeaveLayer('zones/vip/1').subscribe(closePopup)
+
+    WA.room.onEnterLayer('zones/vip/2').subscribe(() => {
+        const id = "2"
+        const description = WA.state["vip"+id+"Description"] as string;
+        const url = WA.state["vip"+id+"URL"] as string;
+        const embed = WA.state["vip"+id+"Embed"] as boolean;
+
+        let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
+
+        if (url) {
+            cta.push({label: 'Ouvrir', className: 'primary', callback: () => openWebsite(url, embed)})
+        }
+
+        //@ts-ignore
+        currentPopup = WA.ui.openPopup("vip"+id+"Popup", description, cta);
+    })
+    WA.room.onLeaveLayer('zones/vip/2').subscribe(closePopup)
+
+    WA.room.onEnterLayer('zones/vip/3').subscribe(() => {
+        const id = "3"
+        const description = WA.state["vip"+id+"Description"] as string;
+        const url = WA.state["vip"+id+"URL"] as string;
+        const embed = WA.state["vip"+id+"Embed"] as boolean;
+
+        let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
+
+        if (url) {
+            cta.push({label: 'Ouvrir', className: 'primary', callback: () => openWebsite(url, embed)})
+        }
+
+        //@ts-ignore
+        currentPopup = WA.ui.openPopup("vip"+id+"Popup", description, cta);
+    })
+    WA.room.onLeaveLayer('zones/vip/3').subscribe(closePopup)
+
+    WA.room.onEnterLayer('zones/vip/4').subscribe(() => {
+        const id = "4"
+        const description = WA.state["vip"+id+"Description"] as string;
+        const url = WA.state["vip"+id+"URL"] as string;
+        const embed = WA.state["vip"+id+"Embed"] as boolean;
+
+        let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
+
+        if (url) {
+            cta.push({label: 'Ouvrir', className: 'primary', callback: () => openWebsite(url, embed)})
+        }
+
+        //@ts-ignore
+        currentPopup = WA.ui.openPopup("vip"+id+"Popup", description, cta);
+    })
+    WA.room.onLeaveLayer('zones/vip/4').subscribe(closePopup)
+
+    WA.room.onEnterLayer('zones/vip/5').subscribe(() => {
+        const id = "5"
+        const description = WA.state["vip"+id+"Description"] as string;
+        const url = WA.state["vip"+id+"URL"] as string;
+        const embed = WA.state["vip"+id+"Embed"] as boolean;
+
+        let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
+
+        if (url) {
+            cta.push({label: 'Ouvrir', className: 'primary', callback: () => openWebsite(url, embed)})
+        }
+
+        //@ts-ignore
+        currentPopup = WA.ui.openPopup("vip"+id+"Popup", description, cta);
+    })
+    WA.room.onLeaveLayer('zones/vip/5').subscribe(closePopup)
+
+    WA.room.onEnterLayer('zones/vip/6').subscribe(() => {
+        const id = "6"
+        const description = WA.state["vip"+id+"Description"] as string;
+        const url = WA.state["vip"+id+"URL"] as string;
+        const embed = WA.state["vip"+id+"Embed"] as boolean;
+
+        let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
+
+        if (url) {
+            cta.push({label: 'Ouvrir', className: 'primary', callback: () => openWebsite(url, embed)})
+        }
+
+        //@ts-ignore
+        currentPopup = WA.ui.openPopup("vip"+id+"Popup", description, cta);
+    })
+    WA.room.onLeaveLayer('zones/vip/6').subscribe(closePopup)
+
+    WA.room.onEnterLayer('zones/vip/playlist').subscribe(() => {
+        const id = "Playlist"
+        const description = WA.state["vip"+id+"Description"] as string;
+        const url = WA.state["vip"+id+"URL"] as string;
+        const embed = WA.state["vip"+id+"Embed"] as boolean;
+
+        let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
+
+        if (url) {
+            cta.push({label: 'Ouvrir', className: 'primary', callback: () => openWebsite(url, embed)})
+        }
+
+        //@ts-ignore
+        currentPopup = WA.ui.openPopup("vip"+id+"Popup", description, cta);
+    })
+    WA.room.onLeaveLayer('zones/vip/playlist').subscribe(closePopup)
+
     // =================== LUXE ===================
 
     WA.room.onEnterLayer('zones/luxe/1').subscribe(() => {
