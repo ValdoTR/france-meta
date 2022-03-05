@@ -114,6 +114,23 @@ WA.onInit().then(() => {
     })
     WA.room.onLeaveLayer('zones/metaverse/6').subscribe(closePopup)
 
+    WA.room.onEnterLayer('zones/metaverse/playlist').subscribe(() => {
+        const id = "Playlist"
+        const description = WA.state["metaverse"+id+"Description"] as string;
+        const url = WA.state["metaverse"+id+"URL"] as string;
+        const embed = WA.state["metaverse"+id+"Embed"] as boolean;
+
+        let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
+
+        if (url) {
+            cta.push({label: 'Ouvrir', className: 'primary', callback: () => openWebsite(url, embed)})
+        }
+
+        //@ts-ignore
+        currentPopup = WA.ui.openPopup("metaverse"+id+"Popup", description, cta);
+    })
+    WA.room.onLeaveLayer('zones/metaverse/playlist').subscribe(closePopup)
+
     // =================== VIDEOS ===================
 
     WA.room.onEnterLayer('zones/videos/playlist').subscribe(() => {
@@ -235,6 +252,23 @@ WA.onInit().then(() => {
         currentPopup = WA.ui.openPopup("patrimoine"+id+"Popup", description, cta);
     })
     WA.room.onLeaveLayer('zones/patrimoine/6').subscribe(closePopup)
+
+    WA.room.onEnterLayer('zones/patrimoine/playlist').subscribe(() => {
+        const id = "Playlist"
+        const description = WA.state["patrimoine"+id+"Description"] as string;
+        const url = WA.state["patrimoine"+id+"URL"] as string;
+        const embed = WA.state["patrimoine"+id+"Embed"] as boolean;
+
+        let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
+
+        if (url) {
+            cta.push({label: 'Ouvrir', className: 'primary', callback: () => openWebsite(url, embed)})
+        }
+
+        //@ts-ignore
+        currentPopup = WA.ui.openPopup("patrimoine"+id+"Popup", description, cta);
+    })
+    WA.room.onLeaveLayer('zones/patrimoine/playlist').subscribe(closePopup)
 
     // =================== FORMATIONS ===================
 
@@ -461,6 +495,23 @@ WA.onInit().then(() => {
     })
     WA.room.onLeaveLayer('zones/luxe/6').subscribe(closePopup)
 
+    WA.room.onEnterLayer('zones/luxe/playlist').subscribe(() => {
+        const id = "Playlist"
+        const description = WA.state["luxe"+id+"Description"] as string;
+        const url = WA.state["luxe"+id+"URL"] as string;
+        const embed = WA.state["luxe"+id+"Embed"] as boolean;
+
+        let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
+
+        if (url) {
+            cta.push({label: 'Ouvrir', className: 'primary', callback: () => openWebsite(url, embed)})
+        }
+
+        //@ts-ignore
+        currentPopup = WA.ui.openPopup("luxe"+id+"Popup", description, cta);
+    })
+    WA.room.onLeaveLayer('zones/luxe/playlist').subscribe(closePopup)
+
     // =================== ASSURANCE ===================
 
     WA.room.onEnterLayer('zones/assurance/1').subscribe(() => {
@@ -564,6 +615,23 @@ WA.onInit().then(() => {
         currentPopup = WA.ui.openPopup("assurance"+id+"Popup", description, cta);
     })
     WA.room.onLeaveLayer('zones/assurance/6').subscribe(closePopup)
+
+    WA.room.onEnterLayer('zones/assurance/playlist').subscribe(() => {
+        const id = "Playlist"
+        const description = WA.state["assurance"+id+"Description"] as string;
+        const url = WA.state["assurance"+id+"URL"] as string;
+        const embed = WA.state["assurance"+id+"Embed"] as boolean;
+
+        let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
+
+        if (url) {
+            cta.push({label: 'Ouvrir', className: 'primary', callback: () => openWebsite(url, embed)})
+        }
+
+        //@ts-ignore
+        currentPopup = WA.ui.openPopup("assurance"+id+"Popup", description, cta);
+    })
+    WA.room.onLeaveLayer('zones/assurance/playlist').subscribe(closePopup)
 
     // =================== VINS ===================
 
@@ -669,6 +737,22 @@ WA.onInit().then(() => {
     })
     WA.room.onLeaveLayer('zones/vins/6').subscribe(closePopup)
 
+    WA.room.onEnterLayer('zones/vins/playlist').subscribe(() => {
+        const id = "Playlist"
+        const description = WA.state["vins"+id+"Description"] as string;
+        const url = WA.state["vins"+id+"URL"] as string;
+        const embed = WA.state["vins"+id+"Embed"] as boolean;
+
+        let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
+
+        if (url) {
+            cta.push({label: 'Ouvrir', className: 'primary', callback: () => openWebsite(url, embed)})
+        }
+
+        //@ts-ignore
+        currentPopup = WA.ui.openPopup("vins"+id+"Popup", description, cta);
+    })
+    WA.room.onLeaveLayer('zones/vins/playlist').subscribe(closePopup)
 
 
     // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
