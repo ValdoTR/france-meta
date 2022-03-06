@@ -1041,11 +1041,11 @@
         {
          "columns":64,
          "firstgid":9158,
-         "image":"src\/assets\/Wolf_RPG_Roofs.png",
+         "image":"src\/assets\/Wolf_RPG_Houses.png",
          "imageheight":2144,
          "imagewidth":2048,
          "margin":0,
-         "name":"Wolf_RPG_Roofs",
+         "name":"Wolf_RPG_Houses",
          "spacing":0,
          "tilecount":4288,
          "tileheight":32,
