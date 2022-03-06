@@ -306,6 +306,38 @@
                  "animation":[
                         {
                          "duration":100,
+                         "tileid":78
+                        }, 
+                        {
+                         "duration":100,
+                         "tileid":80
+                        }, 
+                        {
+                         "duration":100,
+                         "tileid":82
+                        }],
+                 "id":78
+                }, 
+                {
+                 "animation":[
+                        {
+                         "duration":100,
+                         "tileid":79
+                        }, 
+                        {
+                         "duration":100,
+                         "tileid":81
+                        }, 
+                        {
+                         "duration":100,
+                         "tileid":83
+                        }],
+                 "id":79
+                }, 
+                {
+                 "animation":[
+                        {
+                         "duration":100,
                          "tileid":102
                         }, 
                         {
@@ -333,6 +365,38 @@
                          "tileid":107
                         }],
                  "id":103
+                }, 
+                {
+                 "animation":[
+                        {
+                         "duration":100,
+                         "tileid":126
+                        }, 
+                        {
+                         "duration":100,
+                         "tileid":128
+                        }, 
+                        {
+                         "duration":100,
+                         "tileid":130
+                        }],
+                 "id":126
+                }, 
+                {
+                 "animation":[
+                        {
+                         "duration":100,
+                         "tileid":127
+                        }, 
+                        {
+                         "duration":100,
+                         "tileid":129
+                        }, 
+                        {
+                         "duration":100,
+                         "tileid":131
+                        }],
+                 "id":127
                 }, 
                 {
                  "animation":[
@@ -370,6 +434,38 @@
                  "animation":[
                         {
                          "duration":100,
+                         "tileid":174
+                        }, 
+                        {
+                         "duration":100,
+                         "tileid":175
+                        }, 
+                        {
+                         "duration":100,
+                         "tileid":176
+                        }],
+                 "id":174
+                }, 
+                {
+                 "animation":[
+                        {
+                         "duration":100,
+                         "tileid":177
+                        }, 
+                        {
+                         "duration":100,
+                         "tileid":178
+                        }, 
+                        {
+                         "duration":100,
+                         "tileid":179
+                        }],
+                 "id":177
+                }, 
+                {
+                 "animation":[
+                        {
+                         "duration":100,
                          "tileid":198
                         }, 
                         {
@@ -397,6 +493,38 @@
                          "tileid":203
                         }],
                  "id":201
+                }, 
+                {
+                 "animation":[
+                        {
+                         "duration":100,
+                         "tileid":222
+                        }, 
+                        {
+                         "duration":100,
+                         "tileid":223
+                        }, 
+                        {
+                         "duration":100,
+                         "tileid":224
+                        }],
+                 "id":222
+                }, 
+                {
+                 "animation":[
+                        {
+                         "duration":100,
+                         "tileid":225
+                        }, 
+                        {
+                         "duration":100,
+                         "tileid":226
+                        }, 
+                        {
+                         "duration":100,
+                         "tileid":227
+                        }],
+                 "id":225
                 }, 
                 {
                  "animation":[
@@ -434,6 +562,38 @@
                  "animation":[
                         {
                          "duration":100,
+                         "tileid":270
+                        }, 
+                        {
+                         "duration":100,
+                         "tileid":271
+                        }, 
+                        {
+                         "duration":100,
+                         "tileid":272
+                        }],
+                 "id":270
+                }, 
+                {
+                 "animation":[
+                        {
+                         "duration":100,
+                         "tileid":273
+                        }, 
+                        {
+                         "duration":100,
+                         "tileid":274
+                        }, 
+                        {
+                         "duration":100,
+                         "tileid":275
+                        }],
+                 "id":273
+                }, 
+                {
+                 "animation":[
+                        {
+                         "duration":100,
                          "tileid":294
                         }, 
                         {
@@ -466,6 +626,38 @@
                  "animation":[
                         {
                          "duration":100,
+                         "tileid":318
+                        }, 
+                        {
+                         "duration":100,
+                         "tileid":319
+                        }, 
+                        {
+                         "duration":100,
+                         "tileid":320
+                        }],
+                 "id":318
+                }, 
+                {
+                 "animation":[
+                        {
+                         "duration":100,
+                         "tileid":321
+                        }, 
+                        {
+                         "duration":100,
+                         "tileid":322
+                        }, 
+                        {
+                         "duration":100,
+                         "tileid":323
+                        }],
+                 "id":321
+                }, 
+                {
+                 "animation":[
+                        {
+                         "duration":100,
                          "tileid":652
                         }, 
                         {
@@ -488,8 +680,8 @@
                          "probability":1,
                          "tile":-1
                         }],
-                 "name":"Grass",
-                 "tile":6,
+                 "name":"Grass on water",
+                 "tile":102,
                  "type":"corner",
                  "wangtiles":[
                         {
@@ -543,6 +735,136 @@
                         {
                          "tileid":297,
                          "wangid":[0, 0, 0, 1, 0, 1, 0, 1]
+                        }]
+                }, 
+                {
+                 "colors":[
+                        {
+                         "color":"#ff0000",
+                         "name":"",
+                         "probability":1,
+                         "tile":-1
+                        }],
+                 "name":"Sand on water",
+                 "tile":126,
+                 "type":"corner",
+                 "wangtiles":[
+                        {
+                         "tileid":30,
+                         "wangid":[0, 1, 0, 1, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":78,
+                         "wangid":[0, 0, 0, 1, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":79,
+                         "wangid":[0, 1, 0, 1, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":126,
+                         "wangid":[0, 1, 0, 0, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":127,
+                         "wangid":[0, 1, 0, 1, 0, 0, 0, 1]
+                        }, 
+                        {
+                         "tileid":174,
+                         "wangid":[0, 0, 0, 1, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":177,
+                         "wangid":[0, 1, 0, 0, 0, 0, 0, 1]
+                        }, 
+                        {
+                         "tileid":222,
+                         "wangid":[0, 0, 0, 0, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":225,
+                         "wangid":[0, 1, 0, 1, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":270,
+                         "wangid":[0, 0, 0, 0, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":273,
+                         "wangid":[0, 0, 0, 0, 0, 0, 0, 1]
+                        }, 
+                        {
+                         "tileid":318,
+                         "wangid":[0, 0, 0, 1, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":321,
+                         "wangid":[0, 1, 0, 0, 0, 0, 0, 0]
+                        }]
+                }, 
+                {
+                 "colors":[
+                        {
+                         "color":"#ff0000",
+                         "name":"",
+                         "probability":1,
+                         "tile":-1
+                        }],
+                 "name":"Water",
+                 "tile":626,
+                 "type":"corner",
+                 "wangtiles":[
+                        {
+                         "tileid":626,
+                         "wangid":[0, 0, 0, 1, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":627,
+                         "wangid":[0, 0, 0, 0, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":674,
+                         "wangid":[0, 1, 0, 0, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":675,
+                         "wangid":[0, 0, 0, 0, 0, 0, 0, 1]
+                        }, 
+                        {
+                         "tileid":722,
+                         "wangid":[0, 1, 0, 1, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":723,
+                         "wangid":[0, 0, 0, 0, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":770,
+                         "wangid":[0, 1, 0, 0, 0, 0, 0, 1]
+                        }, 
+                        {
+                         "tileid":771,
+                         "wangid":[0, 0, 0, 1, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":818,
+                         "wangid":[0, 1, 0, 0, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":819,
+                         "wangid":[0, 1, 0, 1, 0, 0, 0, 1]
+                        }, 
+                        {
+                         "tileid":866,
+                         "wangid":[0, 0, 0, 1, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":867,
+                         "wangid":[0, 1, 0, 1, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":914,
+                         "wangid":[0, 1, 0, 1, 0, 1, 0, 1]
                         }]
                 }]
         }, 
@@ -1159,6 +1481,150 @@
          "tilecount":40,
          "tileheight":32,
          "tilewidth":32
+        }, 
+        {
+         "columns":64,
+         "firstgid":21394,
+         "image":"src\/assets\/mid_Floor_Ext.png",
+         "imageheight":2048,
+         "imagewidth":2048,
+         "margin":0,
+         "name":"mid_Floor_Ext",
+         "spacing":0,
+         "tilecount":4096,
+         "tileheight":32,
+         "tilewidth":32,
+         "wangsets":[
+                {
+                 "colors":[
+                        {
+                         "color":"#ff0000",
+                         "name":"",
+                         "probability":1,
+                         "tile":-1
+                        }],
+                 "name":"Stones on sand",
+                 "tile":580,
+                 "type":"corner",
+                 "wangtiles":[
+                        {
+                         "tileid":517,
+                         "wangid":[0, 1, 0, 1, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":580,
+                         "wangid":[0, 0, 0, 1, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":581,
+                         "wangid":[0, 0, 0, 0, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":644,
+                         "wangid":[0, 1, 0, 0, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":645,
+                         "wangid":[0, 0, 0, 0, 0, 0, 0, 1]
+                        }, 
+                        {
+                         "tileid":708,
+                         "wangid":[0, 1, 0, 0, 0, 0, 0, 1]
+                        }, 
+                        {
+                         "tileid":709,
+                         "wangid":[0, 1, 0, 1, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":772,
+                         "wangid":[0, 0, 0, 0, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":773,
+                         "wangid":[0, 0, 0, 1, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":836,
+                         "wangid":[0, 1, 0, 0, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":837,
+                         "wangid":[0, 1, 0, 1, 0, 0, 0, 1]
+                        }, 
+                        {
+                         "tileid":900,
+                         "wangid":[0, 0, 0, 1, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":901,
+                         "wangid":[0, 1, 0, 1, 0, 1, 0, 0]
+                        }]
+                }, 
+                {
+                 "colors":[
+                        {
+                         "color":"#ff0000",
+                         "name":"",
+                         "probability":1,
+                         "tile":-1
+                        }],
+                 "name":"Grass on sand",
+                 "tile":576,
+                 "type":"corner",
+                 "wangtiles":[
+                        {
+                         "tileid":513,
+                         "wangid":[0, 1, 0, 1, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":576,
+                         "wangid":[0, 0, 0, 1, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":577,
+                         "wangid":[0, 0, 0, 0, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":640,
+                         "wangid":[0, 1, 0, 0, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":641,
+                         "wangid":[0, 0, 0, 0, 0, 0, 0, 1]
+                        }, 
+                        {
+                         "tileid":704,
+                         "wangid":[0, 1, 0, 0, 0, 0, 0, 1]
+                        }, 
+                        {
+                         "tileid":705,
+                         "wangid":[0, 1, 0, 1, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":768,
+                         "wangid":[0, 0, 0, 0, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":769,
+                         "wangid":[0, 0, 0, 1, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":832,
+                         "wangid":[0, 1, 0, 0, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":833,
+                         "wangid":[0, 1, 0, 1, 0, 0, 0, 1]
+                        }, 
+                        {
+                         "tileid":896,
+                         "wangid":[0, 0, 0, 1, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":897,
+                         "wangid":[0, 1, 0, 1, 0, 1, 0, 0]
+                        }]
+                }]
         }],
  "tilewidth":32,
  "type":"map",
