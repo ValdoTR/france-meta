@@ -270,13 +270,13 @@ WA.onInit().then(() => {
     })
     WA.room.onLeaveLayer('zones/patrimoine/playlist').subscribe(closePopup)
 
-    // =================== FORMATIONS ===================
+    // =================== FRANCE META ===================
 
-    WA.room.onEnterLayer('zones/formations/1').subscribe(() => {
+    WA.room.onEnterLayer('zones/francemeta/1').subscribe(() => {
         const id = "1"
-        const description = WA.state["formations"+id+"Description"] as string;
-        const url = WA.state["formations"+id+"URL"] as string;
-        const embed = WA.state["formations"+id+"Embed"] as boolean;
+        const description = WA.state["francemeta"+id+"Description"] as string;
+        const url = WA.state["francemeta"+id+"URL"] as string;
+        const embed = WA.state["francemeta"+id+"Embed"] as boolean;
 
         let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
 
@@ -285,15 +285,15 @@ WA.onInit().then(() => {
         }
 
         //@ts-ignore
-        currentPopup = WA.ui.openPopup("formations"+id+"Popup", description, cta);
+        currentPopup = WA.ui.openPopup("francemeta"+id+"Popup", description, cta);
     })
-    WA.room.onLeaveLayer('zones/formations/1').subscribe(closePopup)
+    WA.room.onLeaveLayer('zones/francemeta/1').subscribe(closePopup)
 
-    WA.room.onEnterLayer('zones/formations/2').subscribe(() => {
+    WA.room.onEnterLayer('zones/francemeta/2').subscribe(() => {
         const id = "2"
-        const description = WA.state["formations"+id+"Description"] as string;
-        const url = WA.state["formations"+id+"URL"] as string;
-        const embed = WA.state["formations"+id+"Embed"] as boolean;
+        const description = WA.state["francemeta"+id+"Description"] as string;
+        const url = WA.state["francemeta"+id+"URL"] as string;
+        const embed = WA.state["francemeta"+id+"Embed"] as boolean;
 
         let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
 
@@ -302,15 +302,15 @@ WA.onInit().then(() => {
         }
 
         //@ts-ignore
-        currentPopup = WA.ui.openPopup("formations"+id+"Popup", description, cta);
+        currentPopup = WA.ui.openPopup("francemeta"+id+"Popup", description, cta);
     })
-    WA.room.onLeaveLayer('zones/formations/2').subscribe(closePopup)
+    WA.room.onLeaveLayer('zones/francemeta/2').subscribe(closePopup)
 
-    WA.room.onEnterLayer('zones/formations/3').subscribe(() => {
+    WA.room.onEnterLayer('zones/francemeta/3').subscribe(() => {
         const id = "3"
-        const description = WA.state["formations"+id+"Description"] as string;
-        const url = WA.state["formations"+id+"URL"] as string;
-        const embed = WA.state["formations"+id+"Embed"] as boolean;
+        const description = WA.state["francemeta"+id+"Description"] as string;
+        const url = WA.state["francemeta"+id+"URL"] as string;
+        const embed = WA.state["francemeta"+id+"Embed"] as boolean;
 
         let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
 
@@ -319,15 +319,15 @@ WA.onInit().then(() => {
         }
 
         //@ts-ignore
-        currentPopup = WA.ui.openPopup("formations"+id+"Popup", description, cta);
+        currentPopup = WA.ui.openPopup("francemeta"+id+"Popup", description, cta);
     })
-    WA.room.onLeaveLayer('zones/formations/3').subscribe(closePopup)
+    WA.room.onLeaveLayer('zones/francemeta/3').subscribe(closePopup)
 
-    WA.room.onEnterLayer('zones/formations/4').subscribe(() => {
+    WA.room.onEnterLayer('zones/francemeta/4').subscribe(() => {
         const id = "4"
-        const description = WA.state["formations"+id+"Description"] as string;
-        const url = WA.state["formations"+id+"URL"] as string;
-        const embed = WA.state["formations"+id+"Embed"] as boolean;
+        const description = WA.state["francemeta"+id+"Description"] as string;
+        const url = WA.state["francemeta"+id+"URL"] as string;
+        const embed = WA.state["francemeta"+id+"Embed"] as boolean;
 
         let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
 
@@ -336,15 +336,15 @@ WA.onInit().then(() => {
         }
 
         //@ts-ignore
-        currentPopup = WA.ui.openPopup("formations"+id+"Popup", description, cta);
+        currentPopup = WA.ui.openPopup("francemeta"+id+"Popup", description, cta);
     })
-    WA.room.onLeaveLayer('zones/formations/4').subscribe(closePopup)
+    WA.room.onLeaveLayer('zones/francemeta/4').subscribe(closePopup)
 
-    WA.room.onEnterLayer('zones/formations/5').subscribe(() => {
+    WA.room.onEnterLayer('zones/francemeta/5').subscribe(() => {
         const id = "5"
-        const description = WA.state["formations"+id+"Description"] as string;
-        const url = WA.state["formations"+id+"URL"] as string;
-        const embed = WA.state["formations"+id+"Embed"] as boolean;
+        const description = WA.state["francemeta"+id+"Description"] as string;
+        const url = WA.state["francemeta"+id+"URL"] as string;
+        const embed = WA.state["francemeta"+id+"Embed"] as boolean;
 
         let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
 
@@ -353,15 +353,15 @@ WA.onInit().then(() => {
         }
 
         //@ts-ignore
-        currentPopup = WA.ui.openPopup("formations"+id+"Popup", description, cta);
+        currentPopup = WA.ui.openPopup("francemeta"+id+"Popup", description, cta);
     })
-    WA.room.onLeaveLayer('zones/formations/5').subscribe(closePopup)
+    WA.room.onLeaveLayer('zones/francemeta/5').subscribe(closePopup)
 
-    WA.room.onEnterLayer('zones/formations/6').subscribe(() => {
+    WA.room.onEnterLayer('zones/francemeta/6').subscribe(() => {
         const id = "6"
-        const description = WA.state["formations"+id+"Description"] as string;
-        const url = WA.state["formations"+id+"URL"] as string;
-        const embed = WA.state["formations"+id+"Embed"] as boolean;
+        const description = WA.state["francemeta"+id+"Description"] as string;
+        const url = WA.state["francemeta"+id+"URL"] as string;
+        const embed = WA.state["francemeta"+id+"Embed"] as boolean;
 
         let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
 
@@ -370,15 +370,15 @@ WA.onInit().then(() => {
         }
 
         //@ts-ignore
-        currentPopup = WA.ui.openPopup("formations"+id+"Popup", description, cta);
+        currentPopup = WA.ui.openPopup("francemeta"+id+"Popup", description, cta);
     })
-    WA.room.onLeaveLayer('zones/formations/6').subscribe(closePopup)
+    WA.room.onLeaveLayer('zones/francemeta/6').subscribe(closePopup)
 
-    WA.room.onEnterLayer('zones/formations/playlist').subscribe(() => {
+    WA.room.onEnterLayer('zones/francemeta/playlist').subscribe(() => {
         const id = "Playlist"
-        const description = WA.state["formations"+id+"Description"] as string;
-        const url = WA.state["formations"+id+"URL"] as string;
-        const embed = WA.state["formations"+id+"Embed"] as boolean;
+        const description = WA.state["francemeta"+id+"Description"] as string;
+        const url = WA.state["francemeta"+id+"URL"] as string;
+        const embed = WA.state["francemeta"+id+"Embed"] as boolean;
 
         let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
 
@@ -387,9 +387,9 @@ WA.onInit().then(() => {
         }
 
         //@ts-ignore
-        currentPopup = WA.ui.openPopup("formations"+id+"Popup", description, cta);
+        currentPopup = WA.ui.openPopup("francemeta"+id+"Popup", description, cta);
     })
-    WA.room.onLeaveLayer('zones/formations/playlist').subscribe(closePopup)
+    WA.room.onLeaveLayer('zones/francemeta/playlist').subscribe(closePopup)
 
     // =================== VIP ===================
 
