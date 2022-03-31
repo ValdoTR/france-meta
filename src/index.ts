@@ -884,6 +884,25 @@ WA.onInit().then(() => {
     })
     WA.room.onLeaveLayer('zones/discord').subscribe(closePopup)
 
+    // OFFICE
+    WA.room.onEnterLayer('youtubeZone').subscribe(() => {
+        const id = "youtube"
+        const description = WA.state[id+"Description"] as string;
+        const url = WA.state[id+"URL"] as string;
+        const embed = WA.state[id+"Embed"] as boolean;
+
+        let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
+
+        if (url) {
+            cta.push({label: 'Ouvrir', className: 'primary', callback: () => openWebsite(url, embed)})
+        }
+
+        //@ts-ignore
+        currentPopup = WA.ui.openPopup("youtubePopup", description, cta);
+    })
+    WA.room.onLeaveLayer('youtubeZone').subscribe(closePopup)
+
+
     // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
     bootstrapExtra().then(() => {
         console.log('Scripting API Extra ready');
