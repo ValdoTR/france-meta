@@ -378,22 +378,22 @@
         {
          "name":"mapDescription",
          "type":"string",
-         "value":"FranceMeta meetings room."
+         "value":"FranceMeta office room."
         }, 
         {
          "name":"mapImage",
          "type":"string",
-         "value":"meetings.png"
+         "value":"office.png"
         }, 
         {
          "name":"mapLink",
          "type":"string",
-         "value":"https:\/\/valdotr.github.io\/scalezia-map\/meetings.json"
+         "value":"https:\/\/valdotr.github.io\/scalezia-map\/office.json"
         }, 
         {
          "name":"mapName",
          "type":"string",
-         "value":"Meetings"
+         "value":"Office"
         }, 
         {
          "name":"script",
