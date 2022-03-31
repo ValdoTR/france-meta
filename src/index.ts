@@ -875,6 +875,14 @@ WA.onInit().then(() => {
     })
     WA.room.onLeaveLayer('zones/vins/playlist').subscribe(closePopup)
 
+    // DISCORD
+    WA.room.onEnterLayer('zones/discord').subscribe(() => {
+        //@ts-ignore
+        currentPopup = WA.ui.openPopup("discordPopup", "Rejoignez la communauté WorkAdventure sur Discord! \nAide, conseils, discussions, avant-premières...", [
+            {label: 'Me voilà!', className: 'primary', callback: () => openWebsite("https://discord.gg/G6Xh9ZM9aR", false)}
+        ]);
+    })
+    WA.room.onLeaveLayer('zones/discord').subscribe(closePopup)
 
     // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
     bootstrapExtra().then(() => {
