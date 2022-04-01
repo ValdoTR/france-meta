@@ -42,7 +42,7 @@
                 {
                  "name":"exitUrl",
                  "type":"string",
-                 "value":"\/@\/francemeta\/land\/genesis#from-meta-frontier"
+                 "value":"\/@\/francemeta\/land\/genesis#from-metafrontier"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -389,12 +389,12 @@
         {
          "name":"mapImage",
          "type":"string",
-         "value":"meta-frontier.png"
+         "value":"metafrontier.png"
         }, 
         {
          "name":"mapLink",
          "type":"string",
-         "value":"https:\/\/valdotr.github.io\/scalezia-map\/meta-frontier.json"
+         "value":"https:\/\/valdotr.github.io\/scalezia-map\/metafrontier.json"
         }, 
         {
          "name":"mapName",
