@@ -191,22 +191,22 @@
         {
          "name":"mapDescription",
          "type":"string",
-         "value":"FranceMeta conferences room."
+         "value":"FranceMeta amphi room."
         }, 
         {
          "name":"mapImage",
          "type":"string",
-         "value":"conferences.png"
+         "value":"amphi.png"
         }, 
         {
          "name":"mapLink",
          "type":"string",
-         "value":"https:\/\/valdotr.github.io\/scalezia-map\/conferences.json"
+         "value":"https:\/\/valdotr.github.io\/scalezia-map\/amphi.json"
         }, 
         {
          "name":"mapName",
          "type":"string",
-         "value":"Conferences"
+         "value":"Amphi"
         }, 
         {
          "name":"script",
