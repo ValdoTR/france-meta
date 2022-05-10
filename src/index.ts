@@ -10,6 +10,24 @@ WA.onInit().then(() => {
     console.log('Scripting API ready');
     console.log('Player tags: ',WA.player.tags)
     
+    // =================== SHOP ===================
+
+    WA.room.onEnterLayer('zones/shop').subscribe(() => {
+        const description = WA.state["shopDescription"] as string;
+        const url = WA.state["shopURL"] as string;
+        const embed = WA.state["shopEmbed"] as boolean;
+
+        let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
+
+        if (url) {
+            cta.push({label: 'Ouvrir', className: 'primary', callback: () => openWebsite(url, embed)})
+        }
+
+        //@ts-ignore
+        currentPopup = WA.ui.openPopup("shopPopup", description, cta);
+    })
+    WA.room.onLeaveLayer('zones/shop').subscribe(closePopup)
+
     // =================== METAVERSE ===================
 
     WA.room.onEnterLayer('zones/metaverse/1').subscribe(() => {
@@ -202,57 +220,6 @@ WA.onInit().then(() => {
     })
     WA.room.onLeaveLayer('zones/patrimoine/3').subscribe(closePopup)
 
-    WA.room.onEnterLayer('zones/patrimoine/4').subscribe(() => {
-        const id = "4"
-        const description = WA.state["patrimoine"+id+"Description"] as string;
-        const url = WA.state["patrimoine"+id+"URL"] as string;
-        const embed = WA.state["patrimoine"+id+"Embed"] as boolean;
-
-        let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
-
-        if (url) {
-            cta.push({label: 'Ouvrir', className: 'primary', callback: () => openWebsite(url, embed)})
-        }
-
-        //@ts-ignore
-        currentPopup = WA.ui.openPopup("patrimoine"+id+"Popup", description, cta);
-    })
-    WA.room.onLeaveLayer('zones/patrimoine/4').subscribe(closePopup)
-
-    WA.room.onEnterLayer('zones/patrimoine/5').subscribe(() => {
-        const id = "5"
-        const description = WA.state["patrimoine"+id+"Description"] as string;
-        const url = WA.state["patrimoine"+id+"URL"] as string;
-        const embed = WA.state["patrimoine"+id+"Embed"] as boolean;
-
-        let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
-
-        if (url) {
-            cta.push({label: 'Ouvrir', className: 'primary', callback: () => openWebsite(url, embed)})
-        }
-
-        //@ts-ignore
-        currentPopup = WA.ui.openPopup("patrimoine"+id+"Popup", description, cta);
-    })
-    WA.room.onLeaveLayer('zones/patrimoine/5').subscribe(closePopup)
-
-    WA.room.onEnterLayer('zones/patrimoine/6').subscribe(() => {
-        const id = "6"
-        const description = WA.state["patrimoine"+id+"Description"] as string;
-        const url = WA.state["patrimoine"+id+"URL"] as string;
-        const embed = WA.state["patrimoine"+id+"Embed"] as boolean;
-
-        let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
-
-        if (url) {
-            cta.push({label: 'Ouvrir', className: 'primary', callback: () => openWebsite(url, embed)})
-        }
-
-        //@ts-ignore
-        currentPopup = WA.ui.openPopup("patrimoine"+id+"Popup", description, cta);
-    })
-    WA.room.onLeaveLayer('zones/patrimoine/6').subscribe(closePopup)
-
     WA.room.onEnterLayer('zones/patrimoine/playlist').subscribe(() => {
         const id = "Playlist"
         const description = WA.state["patrimoine"+id+"Description"] as string;
@@ -323,57 +290,6 @@ WA.onInit().then(() => {
     })
     WA.room.onLeaveLayer('zones/francemeta/3').subscribe(closePopup)
 
-    WA.room.onEnterLayer('zones/francemeta/4').subscribe(() => {
-        const id = "4"
-        const description = WA.state["francemeta"+id+"Description"] as string;
-        const url = WA.state["francemeta"+id+"URL"] as string;
-        const embed = WA.state["francemeta"+id+"Embed"] as boolean;
-
-        let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
-
-        if (url) {
-            cta.push({label: 'Ouvrir', className: 'primary', callback: () => openWebsite(url, embed)})
-        }
-
-        //@ts-ignore
-        currentPopup = WA.ui.openPopup("francemeta"+id+"Popup", description, cta);
-    })
-    WA.room.onLeaveLayer('zones/francemeta/4').subscribe(closePopup)
-
-    WA.room.onEnterLayer('zones/francemeta/5').subscribe(() => {
-        const id = "5"
-        const description = WA.state["francemeta"+id+"Description"] as string;
-        const url = WA.state["francemeta"+id+"URL"] as string;
-        const embed = WA.state["francemeta"+id+"Embed"] as boolean;
-
-        let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
-
-        if (url) {
-            cta.push({label: 'Ouvrir', className: 'primary', callback: () => openWebsite(url, embed)})
-        }
-
-        //@ts-ignore
-        currentPopup = WA.ui.openPopup("francemeta"+id+"Popup", description, cta);
-    })
-    WA.room.onLeaveLayer('zones/francemeta/5').subscribe(closePopup)
-
-    WA.room.onEnterLayer('zones/francemeta/6').subscribe(() => {
-        const id = "6"
-        const description = WA.state["francemeta"+id+"Description"] as string;
-        const url = WA.state["francemeta"+id+"URL"] as string;
-        const embed = WA.state["francemeta"+id+"Embed"] as boolean;
-
-        let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
-
-        if (url) {
-            cta.push({label: 'Ouvrir', className: 'primary', callback: () => openWebsite(url, embed)})
-        }
-
-        //@ts-ignore
-        currentPopup = WA.ui.openPopup("francemeta"+id+"Popup", description, cta);
-    })
-    WA.room.onLeaveLayer('zones/francemeta/6').subscribe(closePopup)
-
     WA.room.onEnterLayer('zones/francemeta/playlist').subscribe(() => {
         const id = "Playlist"
         const description = WA.state["francemeta"+id+"Description"] as string;
@@ -391,13 +307,13 @@ WA.onInit().then(() => {
     })
     WA.room.onLeaveLayer('zones/francemeta/playlist').subscribe(closePopup)
 
-    // =================== VIP ===================
+    // =================== FOOTBALL ===================
 
-    WA.room.onEnterLayer('zones/vip/1').subscribe(() => {
+    WA.room.onEnterLayer('zones/football/1').subscribe(() => {
         const id = "1"
-        const description = WA.state["vip"+id+"Description"] as string;
-        const url = WA.state["vip"+id+"URL"] as string;
-        const embed = WA.state["vip"+id+"Embed"] as boolean;
+        const description = WA.state["football"+id+"Description"] as string;
+        const url = WA.state["football"+id+"URL"] as string;
+        const embed = WA.state["football"+id+"Embed"] as boolean;
 
         let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
 
@@ -406,15 +322,15 @@ WA.onInit().then(() => {
         }
 
         //@ts-ignore
-        currentPopup = WA.ui.openPopup("vip"+id+"Popup", description, cta);
+        currentPopup = WA.ui.openPopup("football"+id+"Popup", description, cta);
     })
-    WA.room.onLeaveLayer('zones/vip/1').subscribe(closePopup)
+    WA.room.onLeaveLayer('zones/football/1').subscribe(closePopup)
 
-    WA.room.onEnterLayer('zones/vip/2').subscribe(() => {
+    WA.room.onEnterLayer('zones/football/2').subscribe(() => {
         const id = "2"
-        const description = WA.state["vip"+id+"Description"] as string;
-        const url = WA.state["vip"+id+"URL"] as string;
-        const embed = WA.state["vip"+id+"Embed"] as boolean;
+        const description = WA.state["football"+id+"Description"] as string;
+        const url = WA.state["football"+id+"URL"] as string;
+        const embed = WA.state["football"+id+"Embed"] as boolean;
 
         let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
 
@@ -423,15 +339,15 @@ WA.onInit().then(() => {
         }
 
         //@ts-ignore
-        currentPopup = WA.ui.openPopup("vip"+id+"Popup", description, cta);
+        currentPopup = WA.ui.openPopup("football"+id+"Popup", description, cta);
     })
-    WA.room.onLeaveLayer('zones/vip/2').subscribe(closePopup)
+    WA.room.onLeaveLayer('zones/football/2').subscribe(closePopup)
 
-    WA.room.onEnterLayer('zones/vip/3').subscribe(() => {
+    WA.room.onEnterLayer('zones/football/3').subscribe(() => {
         const id = "3"
-        const description = WA.state["vip"+id+"Description"] as string;
-        const url = WA.state["vip"+id+"URL"] as string;
-        const embed = WA.state["vip"+id+"Embed"] as boolean;
+        const description = WA.state["football"+id+"Description"] as string;
+        const url = WA.state["football"+id+"URL"] as string;
+        const embed = WA.state["football"+id+"Embed"] as boolean;
 
         let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
 
@@ -440,66 +356,15 @@ WA.onInit().then(() => {
         }
 
         //@ts-ignore
-        currentPopup = WA.ui.openPopup("vip"+id+"Popup", description, cta);
+        currentPopup = WA.ui.openPopup("football"+id+"Popup", description, cta);
     })
-    WA.room.onLeaveLayer('zones/vip/3').subscribe(closePopup)
+    WA.room.onLeaveLayer('zones/football/3').subscribe(closePopup)
 
-    WA.room.onEnterLayer('zones/vip/4').subscribe(() => {
-        const id = "4"
-        const description = WA.state["vip"+id+"Description"] as string;
-        const url = WA.state["vip"+id+"URL"] as string;
-        const embed = WA.state["vip"+id+"Embed"] as boolean;
-
-        let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
-
-        if (url) {
-            cta.push({label: 'Ouvrir', className: 'primary', callback: () => openWebsite(url, embed)})
-        }
-
-        //@ts-ignore
-        currentPopup = WA.ui.openPopup("vip"+id+"Popup", description, cta);
-    })
-    WA.room.onLeaveLayer('zones/vip/4').subscribe(closePopup)
-
-    WA.room.onEnterLayer('zones/vip/5').subscribe(() => {
-        const id = "5"
-        const description = WA.state["vip"+id+"Description"] as string;
-        const url = WA.state["vip"+id+"URL"] as string;
-        const embed = WA.state["vip"+id+"Embed"] as boolean;
-
-        let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
-
-        if (url) {
-            cta.push({label: 'Ouvrir', className: 'primary', callback: () => openWebsite(url, embed)})
-        }
-
-        //@ts-ignore
-        currentPopup = WA.ui.openPopup("vip"+id+"Popup", description, cta);
-    })
-    WA.room.onLeaveLayer('zones/vip/5').subscribe(closePopup)
-
-    WA.room.onEnterLayer('zones/vip/6').subscribe(() => {
-        const id = "6"
-        const description = WA.state["vip"+id+"Description"] as string;
-        const url = WA.state["vip"+id+"URL"] as string;
-        const embed = WA.state["vip"+id+"Embed"] as boolean;
-
-        let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
-
-        if (url) {
-            cta.push({label: 'Ouvrir', className: 'primary', callback: () => openWebsite(url, embed)})
-        }
-
-        //@ts-ignore
-        currentPopup = WA.ui.openPopup("vip"+id+"Popup", description, cta);
-    })
-    WA.room.onLeaveLayer('zones/vip/6').subscribe(closePopup)
-
-    WA.room.onEnterLayer('zones/vip/playlist').subscribe(() => {
+    WA.room.onEnterLayer('zones/football/playlist').subscribe(() => {
         const id = "Playlist"
-        const description = WA.state["vip"+id+"Description"] as string;
-        const url = WA.state["vip"+id+"URL"] as string;
-        const embed = WA.state["vip"+id+"Embed"] as boolean;
+        const description = WA.state["football"+id+"Description"] as string;
+        const url = WA.state["football"+id+"URL"] as string;
+        const embed = WA.state["football"+id+"Embed"] as boolean;
 
         let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
 
@@ -508,17 +373,17 @@ WA.onInit().then(() => {
         }
 
         //@ts-ignore
-        currentPopup = WA.ui.openPopup("vip"+id+"Popup", description, cta);
+        currentPopup = WA.ui.openPopup("football"+id+"Popup", description, cta);
     })
-    WA.room.onLeaveLayer('zones/vip/playlist').subscribe(closePopup)
+    WA.room.onLeaveLayer('zones/football/playlist').subscribe(closePopup)
 
-    // =================== LUXE ===================
+    // =================== CINEMA ===================
 
-    WA.room.onEnterLayer('zones/luxe/1').subscribe(() => {
+    WA.room.onEnterLayer('zones/cinema/1').subscribe(() => {
         const id = "1"
-        const description = WA.state["luxe"+id+"Description"] as string;
-        const url = WA.state["luxe"+id+"URL"] as string;
-        const embed = WA.state["luxe"+id+"Embed"] as boolean;
+        const description = WA.state["cinema"+id+"Description"] as string;
+        const url = WA.state["cinema"+id+"URL"] as string;
+        const embed = WA.state["cinema"+id+"Embed"] as boolean;
 
         let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
 
@@ -527,15 +392,15 @@ WA.onInit().then(() => {
         }
 
         //@ts-ignore
-        currentPopup = WA.ui.openPopup("luxe"+id+"Popup", description, cta);
+        currentPopup = WA.ui.openPopup("cinema"+id+"Popup", description, cta);
     })
-    WA.room.onLeaveLayer('zones/luxe/1').subscribe(closePopup)
+    WA.room.onLeaveLayer('zones/cinema/1').subscribe(closePopup)
 
-    WA.room.onEnterLayer('zones/luxe/2').subscribe(() => {
+    WA.room.onEnterLayer('zones/cinema/2').subscribe(() => {
         const id = "2"
-        const description = WA.state["luxe"+id+"Description"] as string;
-        const url = WA.state["luxe"+id+"URL"] as string;
-        const embed = WA.state["luxe"+id+"Embed"] as boolean;
+        const description = WA.state["cinema"+id+"Description"] as string;
+        const url = WA.state["cinema"+id+"URL"] as string;
+        const embed = WA.state["cinema"+id+"Embed"] as boolean;
 
         let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
 
@@ -544,15 +409,15 @@ WA.onInit().then(() => {
         }
 
         //@ts-ignore
-        currentPopup = WA.ui.openPopup("luxe"+id+"Popup", description, cta);
+        currentPopup = WA.ui.openPopup("cinema"+id+"Popup", description, cta);
     })
-    WA.room.onLeaveLayer('zones/luxe/2').subscribe(closePopup)
+    WA.room.onLeaveLayer('zones/cinema/2').subscribe(closePopup)
 
-    WA.room.onEnterLayer('zones/luxe/3').subscribe(() => {
+    WA.room.onEnterLayer('zones/cinema/3').subscribe(() => {
         const id = "3"
-        const description = WA.state["luxe"+id+"Description"] as string;
-        const url = WA.state["luxe"+id+"URL"] as string;
-        const embed = WA.state["luxe"+id+"Embed"] as boolean;
+        const description = WA.state["cinema"+id+"Description"] as string;
+        const url = WA.state["cinema"+id+"URL"] as string;
+        const embed = WA.state["cinema"+id+"Embed"] as boolean;
 
         let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
 
@@ -561,66 +426,15 @@ WA.onInit().then(() => {
         }
 
         //@ts-ignore
-        currentPopup = WA.ui.openPopup("luxe"+id+"Popup", description, cta);
+        currentPopup = WA.ui.openPopup("cinema"+id+"Popup", description, cta);
     })
-    WA.room.onLeaveLayer('zones/luxe/3').subscribe(closePopup)
+    WA.room.onLeaveLayer('zones/cinema/3').subscribe(closePopup)
 
-    WA.room.onEnterLayer('zones/luxe/4').subscribe(() => {
-        const id = "4"
-        const description = WA.state["luxe"+id+"Description"] as string;
-        const url = WA.state["luxe"+id+"URL"] as string;
-        const embed = WA.state["luxe"+id+"Embed"] as boolean;
-
-        let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
-
-        if (url) {
-            cta.push({label: 'Ouvrir', className: 'primary', callback: () => openWebsite(url, embed)})
-        }
-
-        //@ts-ignore
-        currentPopup = WA.ui.openPopup("luxe"+id+"Popup", description, cta);
-    })
-    WA.room.onLeaveLayer('zones/luxe/4').subscribe(closePopup)
-
-    WA.room.onEnterLayer('zones/luxe/5').subscribe(() => {
-        const id = "5"
-        const description = WA.state["luxe"+id+"Description"] as string;
-        const url = WA.state["luxe"+id+"URL"] as string;
-        const embed = WA.state["luxe"+id+"Embed"] as boolean;
-
-        let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
-
-        if (url) {
-            cta.push({label: 'Ouvrir', className: 'primary', callback: () => openWebsite(url, embed)})
-        }
-
-        //@ts-ignore
-        currentPopup = WA.ui.openPopup("luxe"+id+"Popup", description, cta);
-    })
-    WA.room.onLeaveLayer('zones/luxe/5').subscribe(closePopup)
-
-    WA.room.onEnterLayer('zones/luxe/6').subscribe(() => {
-        const id = "6"
-        const description = WA.state["luxe"+id+"Description"] as string;
-        const url = WA.state["luxe"+id+"URL"] as string;
-        const embed = WA.state["luxe"+id+"Embed"] as boolean;
-
-        let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
-
-        if (url) {
-            cta.push({label: 'Ouvrir', className: 'primary', callback: () => openWebsite(url, embed)})
-        }
-
-        //@ts-ignore
-        currentPopup = WA.ui.openPopup("luxe"+id+"Popup", description, cta);
-    })
-    WA.room.onLeaveLayer('zones/luxe/6').subscribe(closePopup)
-
-    WA.room.onEnterLayer('zones/luxe/playlist').subscribe(() => {
+    WA.room.onEnterLayer('zones/cinema/playlist').subscribe(() => {
         const id = "Playlist"
-        const description = WA.state["luxe"+id+"Description"] as string;
-        const url = WA.state["luxe"+id+"URL"] as string;
-        const embed = WA.state["luxe"+id+"Embed"] as boolean;
+        const description = WA.state["cinema"+id+"Description"] as string;
+        const url = WA.state["cinema"+id+"URL"] as string;
+        const embed = WA.state["cinema"+id+"Embed"] as boolean;
 
         let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
 
@@ -629,9 +443,9 @@ WA.onInit().then(() => {
         }
 
         //@ts-ignore
-        currentPopup = WA.ui.openPopup("luxe"+id+"Popup", description, cta);
+        currentPopup = WA.ui.openPopup("cinema"+id+"Popup", description, cta);
     })
-    WA.room.onLeaveLayer('zones/luxe/playlist').subscribe(closePopup)
+    WA.room.onLeaveLayer('zones/cinema/playlist').subscribe(closePopup)
 
     // =================== ASSURANCE ===================
 
@@ -685,57 +499,6 @@ WA.onInit().then(() => {
         currentPopup = WA.ui.openPopup("assurance"+id+"Popup", description, cta);
     })
     WA.room.onLeaveLayer('zones/assurance/3').subscribe(closePopup)
-
-    WA.room.onEnterLayer('zones/assurance/4').subscribe(() => {
-        const id = "4"
-        const description = WA.state["assurance"+id+"Description"] as string;
-        const url = WA.state["assurance"+id+"URL"] as string;
-        const embed = WA.state["assurance"+id+"Embed"] as boolean;
-
-        let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
-
-        if (url) {
-            cta.push({label: 'Ouvrir', className: 'primary', callback: () => openWebsite(url, embed)})
-        }
-
-        //@ts-ignore
-        currentPopup = WA.ui.openPopup("assurance"+id+"Popup", description, cta);
-    })
-    WA.room.onLeaveLayer('zones/assurance/4').subscribe(closePopup)
-
-    WA.room.onEnterLayer('zones/assurance/5').subscribe(() => {
-        const id = "5"
-        const description = WA.state["assurance"+id+"Description"] as string;
-        const url = WA.state["assurance"+id+"URL"] as string;
-        const embed = WA.state["assurance"+id+"Embed"] as boolean;
-
-        let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
-
-        if (url) {
-            cta.push({label: 'Ouvrir', className: 'primary', callback: () => openWebsite(url, embed)})
-        }
-
-        //@ts-ignore
-        currentPopup = WA.ui.openPopup("assurance"+id+"Popup", description, cta);
-    })
-    WA.room.onLeaveLayer('zones/assurance/5').subscribe(closePopup)
-
-    WA.room.onEnterLayer('zones/assurance/6').subscribe(() => {
-        const id = "6"
-        const description = WA.state["assurance"+id+"Description"] as string;
-        const url = WA.state["assurance"+id+"URL"] as string;
-        const embed = WA.state["assurance"+id+"Embed"] as boolean;
-
-        let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
-
-        if (url) {
-            cta.push({label: 'Ouvrir', className: 'primary', callback: () => openWebsite(url, embed)})
-        }
-
-        //@ts-ignore
-        currentPopup = WA.ui.openPopup("assurance"+id+"Popup", description, cta);
-    })
-    WA.room.onLeaveLayer('zones/assurance/6').subscribe(closePopup)
 
     WA.room.onEnterLayer('zones/assurance/playlist').subscribe(() => {
         const id = "Playlist"
@@ -806,57 +569,6 @@ WA.onInit().then(() => {
         currentPopup = WA.ui.openPopup("vins"+id+"Popup", description, cta);
     })
     WA.room.onLeaveLayer('zones/vins/3').subscribe(closePopup)
-
-    WA.room.onEnterLayer('zones/vins/4').subscribe(() => {
-        const id = "4"
-        const description = WA.state["vins"+id+"Description"] as string;
-        const url = WA.state["vins"+id+"URL"] as string;
-        const embed = WA.state["vins"+id+"Embed"] as boolean;
-
-        let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
-
-        if (url) {
-            cta.push({label: 'Ouvrir', className: 'primary', callback: () => openWebsite(url, embed)})
-        }
-
-        //@ts-ignore
-        currentPopup = WA.ui.openPopup("vins"+id+"Popup", description, cta);
-    })
-    WA.room.onLeaveLayer('zones/vins/4').subscribe(closePopup)
-
-    WA.room.onEnterLayer('zones/vins/5').subscribe(() => {
-        const id = "5"
-        const description = WA.state["vins"+id+"Description"] as string;
-        const url = WA.state["vins"+id+"URL"] as string;
-        const embed = WA.state["vins"+id+"Embed"] as boolean;
-
-        let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
-
-        if (url) {
-            cta.push({label: 'Ouvrir', className: 'primary', callback: () => openWebsite(url, embed)})
-        }
-
-        //@ts-ignore
-        currentPopup = WA.ui.openPopup("vins"+id+"Popup", description, cta);
-    })
-    WA.room.onLeaveLayer('zones/vins/5').subscribe(closePopup)
-
-    WA.room.onEnterLayer('zones/vins/6').subscribe(() => {
-        const id = "6"
-        const description = WA.state["vins"+id+"Description"] as string;
-        const url = WA.state["vins"+id+"URL"] as string;
-        const embed = WA.state["vins"+id+"Embed"] as boolean;
-
-        let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
-
-        if (url) {
-            cta.push({label: 'Ouvrir', className: 'primary', callback: () => openWebsite(url, embed)})
-        }
-
-        //@ts-ignore
-        currentPopup = WA.ui.openPopup("vins"+id+"Popup", description, cta);
-    })
-    WA.room.onLeaveLayer('zones/vins/6').subscribe(closePopup)
 
     WA.room.onEnterLayer('zones/vins/playlist').subscribe(() => {
         const id = "Playlist"
