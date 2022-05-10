@@ -12,10 +12,11 @@ WA.onInit().then(() => {
     
     // =================== SHOP ===================
 
-    WA.room.onEnterLayer('zones/shop').subscribe(() => {
-        const description = WA.state["shopDescription"] as string;
-        const url = WA.state["shopURL"] as string;
-        const embed = WA.state["shopEmbed"] as boolean;
+    WA.room.onEnterLayer('zones/shop/1').subscribe(() => {
+        const id = "1"
+        const description = WA.state["shop"+id+"Description"] as string;
+        const url = WA.state["shop"+id+"URL"] as string;
+        const embed = WA.state["shop"+id+"Embed"] as boolean;
 
         let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
 
@@ -24,9 +25,43 @@ WA.onInit().then(() => {
         }
 
         //@ts-ignore
-        currentPopup = WA.ui.openPopup("shopPopup", description, cta);
+        currentPopup = WA.ui.openPopup("shop"+id+"Popup", description, cta);
     })
-    WA.room.onLeaveLayer('zones/shop').subscribe(closePopup)
+    WA.room.onLeaveLayer('zones/shop/1').subscribe(closePopup)
+
+    WA.room.onEnterLayer('zones/shop/2').subscribe(() => {
+        const id = "2"
+        const description = WA.state["shop"+id+"Description"] as string;
+        const url = WA.state["shop"+id+"URL"] as string;
+        const embed = WA.state["shop"+id+"Embed"] as boolean;
+
+        let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
+
+        if (url) {
+            cta.push({label: 'Ouvrir', className: 'primary', callback: () => openWebsite(url, embed)})
+        }
+
+        //@ts-ignore
+        currentPopup = WA.ui.openPopup("shop"+id+"Popup", description, cta);
+    })
+    WA.room.onLeaveLayer('zones/shop/2').subscribe(closePopup)
+
+    WA.room.onEnterLayer('zones/shop/3').subscribe(() => {
+        const id = "3"
+        const description = WA.state["shop"+id+"Description"] as string;
+        const url = WA.state["shop"+id+"URL"] as string;
+        const embed = WA.state["shop"+id+"Embed"] as boolean;
+
+        let cta = [{label: 'Fermer', className: 'normal', callback: () => closePopup()}]
+
+        if (url) {
+            cta.push({label: 'Ouvrir', className: 'primary', callback: () => openWebsite(url, embed)})
+        }
+
+        //@ts-ignore
+        currentPopup = WA.ui.openPopup("shop"+id+"Popup", description, cta);
+    })
+    WA.room.onLeaveLayer('zones/shop/3').subscribe(closePopup)
 
     // =================== METAVERSE ===================
 
