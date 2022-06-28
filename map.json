@@ -1349,7 +1349,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https:\/\/calendly.com\/emoyrand\/30min"
+                         "value":"https:\/\/calendly.com\/emoyrand\/reunion"
                         }, 
                         {
                          "name":"openWebsiteTrigger",
